@@ -1,0 +1,54 @@
+/* Force Light Theme Override - Prevents dark mode from ever activating */
+
+/* Override any dark theme settings to force light theme */
+html[data-theme="dark"],
+html[data-theme="dark"] * {
+    /* Force light theme colors even when dark theme is applied */
+    background-color: white !important;
+    color: #494e52 !important;
+}
+
+/* Ensure specific elements stay light */
+html[data-theme="dark"] .masthead,
+html[data-theme="dark"] .masthead *,
+html[data-theme="dark"] .page__content,
+html[data-theme="dark"] .page__content *,
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .sidebar *,
+html[data-theme="dark"] .page__footer,
+html[data-theme="dark"] .page__footer * {
+    background-color: white !important;
+    color: #494e52 !important;
+    border-color: #bdc1c4 !important;
+}
+
+/* Force light theme for links */
+html[data-theme="dark"] a,
+html[data-theme="dark"] a:visited {
+    color: #268bd2 !important;
+}
+
+html[data-theme="dark"] a:hover {
+    color: #1a5490 !important;
+}
+
+/* Force light theme for navigation */
+html[data-theme="dark"] .masthead__menu-item a {
+    color: #494e52 !important;
+}
+
+/* Force light theme for code blocks */
+html[data-theme="dark"] pre,
+html[data-theme="dark"] code {
+    background-color: #fafafa !important;
+    color: #494e52 !important;
+}
+
+/* Force light theme for tables */
+html[data-theme="dark"] table,
+html[data-theme="dark"] th,
+html[data-theme="dark"] td {
+    background-color: white !important;
+    color: #494e52 !important;
+    border-color: #bdc1c4 !important;
+}

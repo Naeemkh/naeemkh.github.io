@@ -1,5 +1,5 @@
 ---
-date: 2025-06-15
+date: 2024-03-25
 title: "Joined Harvard's Kempner Institute"
 ---
 

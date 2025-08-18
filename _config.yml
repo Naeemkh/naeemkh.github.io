@@ -230,8 +230,8 @@ collections:
     output: true
     permalink: /:collection/:path/
   news:
-    output: false
-    sort_by: date
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -295,7 +295,9 @@ defaults:
       type: news
     values:
       layout: single
-      author_profile: false
+      author_profile: true
+      share: false
+      comments: false
 
 
 # Sass/SCSS
