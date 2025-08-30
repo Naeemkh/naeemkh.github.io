@@ -89,12 +89,37 @@ body {
   }
 }
 
-/* Page content improvements */
+/* Fix page content layout - override Susy grid on mobile */
 .page {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1023px) {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    float: none !important;
+  }
+}
+
+/* Ensure sidebar doesn't interfere on mobile */
+.sidebar {
+  @media screen and (max-width: 1023px) {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow-y: visible !important;
+    padding-top: 0 !important;
+    margin-bottom: 2em;
+    float: none !important;
+  }
+}
+
+/* Make main content full width on mobile */
+#main {
+  @media screen and (max-width: 1023px) {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0.5em;
+    float: none !important;
   }
 }
 
@@ -127,6 +152,74 @@ pre {
 }
 
 /* Fix navigation on mobile */
+.greedy-nav {
+  @media screen and (max-width: 767px) {
+    min-width: 100%;
+    
+    .visible-links {
+      display: flex;
+      flex-wrap: wrap;
+      
+      li {
+        display: block;
+        
+        &:first-child {
+          width: 100%;
+          margin-bottom: 0.5em;
+          
+          a {
+            font-size: $type-size-5;
+            margin: 0;
+            padding: 0.5em 0;
+            text-align: center;
+          }
+        }
+        
+        a {
+          margin: 0 0.25em;
+          padding: 0.25em 0.5em;
+          font-size: $type-size-6;
+        }
+      }
+    }
+    
+    button {
+      position: relative;
+      height: auto;
+      right: auto;
+      padding: 0.5rem;
+      margin: 0.5em auto;
+      display: block;
+    }
+  }
+}
+
+.masthead {
+  @media screen and (max-width: 767px) {
+    position: relative;
+    
+    &__inner-wrap {
+      padding: 0.25em 0.5em;
+    }
+  }
+}
+
+/* Fix navigation dropdown */
+.hidden-links {
+  @media screen and (max-width: 767px) {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin-top: 0.5em !important;
+    background: var(--global-bg-color) !important;
+    border: 1px solid var(--global-border-color) !important;
+    box-shadow: none !important;
+    
+    &:before, &:after {
+      display: none !important;
+    }
+  }
+}
 .breadcrumbs {
   @media screen and (max-width: 767px) {
     padding-left: 0.5em;
@@ -174,6 +267,23 @@ img {
   @media screen and (max-width: 767px) {
     max-width: 100%;
     box-sizing: border-box;
+  }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+  @media screen and (max-width: 767px) {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}
+
+/* Fix container widths */
+.container {
+  @media screen and (max-width: 767px) {
+    max-width: 100% !important;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 
