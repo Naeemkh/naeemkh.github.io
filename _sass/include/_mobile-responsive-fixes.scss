@@ -1,0 +1,190 @@
+/* ==========================================================================
+   MOBILE RESPONSIVE FIXES
+   ========================================================================== */
+
+/* Mobile-first responsive improvements for better mobile experience */
+
+/* Fix main content on mobile */
+#main {
+  @media screen and (max-width: 767px) {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 1em;
+  }
+}
+
+/* Improve sidebar behavior on mobile */
+.sidebar {
+  @media screen and (max-width: 1023px) {
+    position: relative !important;
+    height: auto !important;
+    overflow-y: visible !important;
+    padding-top: 0 !important;
+    margin-bottom: 2em;
+  }
+  
+  @media screen and (max-width: 767px) {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+}
+
+/* Fix author profile on mobile */
+.author__avatar {
+  @media screen and (max-width: 767px) {
+    img {
+      max-width: 120px;
+    }
+  }
+}
+
+/* Improve author content layout on mobile */
+.author__content {
+  @media screen and (max-width: 767px) {
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+}
+
+/* Fix author URLs dropdown on mobile */
+.author__urls-wrapper {
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+}
+
+.author__urls {
+  @media screen and (max-width: 767px) {
+    position: relative !important;
+    right: auto !important;
+    margin-top: 10px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: block !important;
+    
+    &:before, &:after {
+      display: none !important;
+    }
+  }
+}
+
+/* Masthead improvements for mobile */
+.masthead {
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+  
+  &__inner-wrap {
+    @media screen and (max-width: 767px) {
+      padding: 0.5em 0.5em;
+    }
+  }
+}
+
+/* Fix body padding when masthead is not fixed on mobile */
+body {
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+/* Page content improvements */
+.page {
+  @media screen and (max-width: 767px) {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Improve table responsiveness */
+table {
+  @media screen and (max-width: 767px) {
+    font-size: $type-size-7;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Fix code blocks on mobile */
+pre {
+  @media screen and (max-width: 767px) {
+    font-size: $type-size-7;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Improve button spacing on mobile */
+.btn {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0.5em;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+}
+
+/* Fix navigation on mobile */
+.breadcrumbs {
+  @media screen and (max-width: 767px) {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: $type-size-7;
+  }
+}
+
+/* Improve pagination on mobile */
+.pagination {
+  @media screen and (max-width: 767px) {
+    li a {
+      font-size: $type-size-7;
+      padding: 0.3em 0.5em;
+    }
+  }
+}
+
+/* Fix page meta on mobile */
+.page__meta {
+  @media screen and (max-width: 767px) {
+    font-size: $type-size-7;
+    margin-top: 1em;
+  }
+}
+
+/* Improve typography on mobile */
+h1, h2, h3, h4, h5, h6 {
+  @media screen and (max-width: 767px) {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Fix image responsiveness */
+img {
+  @media screen and (max-width: 767px) {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Ensure no horizontal overflow */
+* {
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Fix any potential wide elements */
+.page__content {
+  @media screen and (max-width: 767px) {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    
+    ul, ol {
+      padding-left: 1.5em;
+    }
+  }
+}
