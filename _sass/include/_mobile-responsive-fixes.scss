@@ -73,8 +73,15 @@
     margin-bottom: 1em;
     
     img {
-      max-width: 120px;
+      width: 60vw !important;
+      height: 60vw !important;
+      max-width: 60vw !important;
+      max-height: 60vw !important;
+      min-width: 60vw !important;
+      min-height: 60vw !important;
       margin: 0 auto;
+      object-fit: cover !important;
+      border-radius: 50%;
     }
   }
 }
