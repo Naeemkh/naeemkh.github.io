@@ -13,43 +13,80 @@
   }
 }
 
-/* Improve sidebar behavior on mobile */
+/* Improve sidebar behavior on mobile - completely reformat layout */
 .sidebar {
   @media screen and (max-width: 1023px) {
     position: relative !important;
+    width: 100% !important;
     height: auto !important;
     overflow-y: visible !important;
     padding-top: 0 !important;
     margin-bottom: 2em;
+    float: none !important;
   }
   
   @media screen and (max-width: 767px) {
     margin-top: 0.5em;
     margin-bottom: 1.5em;
-  }
-}
-
-/* Fix author profile on mobile */
-.author__avatar {
-  @media screen and (max-width: 767px) {
-    img {
-      max-width: 120px;
+    padding: 1em;
+    background: rgba(0,0,0,0.02);
+    border-radius: 8px;
+    
+    /* Stack profile elements vertically and center them */
+    [itemscope] {
+      display: block !important;
+      text-align: center;
+      
+      .author__avatar,
+      .author__content,
+      .author__urls-wrapper {
+        display: block !important;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 1em;
+      }
     }
   }
 }
 
-/* Improve author content layout on mobile */
-.author__content {
+/* Fix author profile on mobile - center everything */
+.author__avatar {
   @media screen and (max-width: 767px) {
-    padding-left: 10px;
-    padding-right: 15px;
+    display: block !important;
+    text-align: center;
+    width: 100% !important;
+    margin-bottom: 1em;
+    
+    img {
+      max-width: 120px;
+      margin: 0 auto;
+    }
   }
 }
 
-/* Fix author URLs dropdown on mobile */
+/* Improve author content layout on mobile - center content */
+.author__content {
+  @media screen and (max-width: 767px) {
+    display: block !important;
+    text-align: center;
+    width: 100% !important;
+    padding: 0;
+    margin-bottom: 1em;
+  }
+}
+
+/* Fix author URLs dropdown on mobile - remove button and center links */
 .author__urls-wrapper {
   @media screen and (max-width: 767px) {
     position: relative;
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+    
+    /* Hide the "Follow" button on mobile */
+    button {
+      display: none !important;
+    }
   }
 }
 
@@ -57,14 +94,36 @@
   @media screen and (max-width: 767px) {
     position: relative !important;
     right: auto !important;
-    margin-top: 10px !important;
+    margin: 0 auto !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     display: block !important;
+    text-align: center;
+    max-width: 300px;
     
     &:before, &:after {
       display: none !important;
+    }
+    
+    li {
+      display: inline-block;
+      margin: 0.25em;
+      white-space: normal;
+      
+      a {
+        padding: 0.5em;
+        display: block;
+        text-align: center;
+        border-radius: 4px;
+        background: rgba(0,0,0,0.05);
+        transition: background 0.2s ease;
+        
+        &:hover {
+          background: rgba(0,0,0,0.1);
+          text-decoration: none;
+        }
+      }
     }
   }
 }
@@ -295,6 +354,36 @@ html, body {
     
     ul, ol {
       padding-left: 1.5em;
+    }
+  }
+}
+
+/* Additional author profile improvements */
+.author__name {
+  @media screen and (max-width: 767px) {
+    font-size: $type-size-4 !important;
+    margin-bottom: 0.5em;
+  }
+}
+
+.author__bio {
+  @media screen and (max-width: 767px) {
+    font-size: $type-size-6;
+    line-height: 1.4;
+    margin-bottom: 1em;
+  }
+}
+
+/* Ensure social icons are properly sized on mobile */
+.author__urls {
+  @media screen and (max-width: 767px) {
+    li a {
+      font-size: $type-size-6 !important;
+      
+      i {
+        font-size: 1.2em;
+        margin-right: 0.5em;
+      }
     }
   }
 }
