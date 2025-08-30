@@ -26,16 +26,31 @@
   }
   
   @media screen and (max-width: 767px) {
-    margin-top: 0.5em;
-    margin-bottom: 1.5em;
-    padding: 1em;
+    margin-top: 0 !important;
+    margin-bottom: 1.5em !important;
+    padding: 0.5em !important;
+    padding-top: 0 !important;
     background: rgba(0,0,0,0.02);
     border-radius: 8px;
+    
+    /* Override any inline styles that might be applied */
+    &[style] {
+      padding-top: 0 !important;
+      margin-bottom: 1.5em !important;
+    }
     
     /* Stack profile elements vertically and center them */
     [itemscope] {
       display: block !important;
       text-align: center;
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+      
+      /* Override any inline styles on the profile container */
+      &[style] {
+        padding-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
       
       .author__avatar,
       .author__content,
@@ -158,19 +173,6 @@ body {
   }
 }
 
-/* Ensure sidebar doesn't interfere on mobile */
-.sidebar {
-  @media screen and (max-width: 1023px) {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    overflow-y: visible !important;
-    padding-top: 0 !important;
-    margin-bottom: 2em;
-    float: none !important;
-  }
-}
-
 /* Make main content full width on mobile */
 #main {
   @media screen and (max-width: 1023px) {
@@ -242,13 +244,9 @@ pre {
       }
     }
     
+    /* Hide the hamburger menu button on mobile */
     button {
-      position: relative;
-      height: auto;
-      right: auto;
-      padding: 0.5rem;
-      margin: 0.5em auto;
-      display: block;
+      display: none !important;
     }
   }
 }
@@ -263,19 +261,37 @@ pre {
   }
 }
 
-/* Fix navigation dropdown */
+/* Fix navigation dropdown - always show links on mobile since no button */
 .hidden-links {
   @media screen and (max-width: 767px) {
     position: relative !important;
     top: auto !important;
     right: auto !important;
     margin-top: 0.5em !important;
-    background: var(--global-bg-color) !important;
-    border: 1px solid var(--global-border-color) !important;
+    background: transparent !important;
+    border: none !important;
     box-shadow: none !important;
+    display: block !important;
     
     &:before, &:after {
       display: none !important;
+    }
+    
+    li {
+      display: inline-block;
+      margin: 0.25em;
+      
+      a {
+        padding: 0.25em 0.5em;
+        font-size: $type-size-6;
+        background: rgba(0,0,0,0.05);
+        border-radius: 4px;
+        transition: background 0.2s ease;
+        
+        &:hover {
+          background: rgba(0,0,0,0.1);
+        }
+      }
     }
   }
 }
@@ -362,7 +378,9 @@ html, body {
 .author__name {
   @media screen and (max-width: 767px) {
     font-size: $type-size-4 !important;
+    margin-top: 0 !important;
     margin-bottom: 0.5em;
+    padding-top: 0 !important;
   }
 }
 
@@ -371,6 +389,34 @@ html, body {
     font-size: $type-size-6;
     line-height: 1.4;
     margin-bottom: 1em;
+    margin-top: 0;
+  }
+}
+
+/* Force override of any inline styles on mobile */
+@media screen and (max-width: 767px) {
+  .sidebar,
+  .sidebar *,
+  .sidebar [itemscope],
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    &[style*="padding-top"] {
+      padding-top: 0 !important;
+    }
+    &[style*="margin-top"] {
+      margin-top: 0 !important;
+    }
+    &[style*="margin-bottom"] {
+      margin-bottom: 1em !important;
+    }
+  }
+  
+  /* Specifically target the sidebar if it has inline styles */
+  .sidebar[style] {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.5em !important;
   }
 }
 
