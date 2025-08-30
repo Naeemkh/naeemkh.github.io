@@ -221,6 +221,11 @@ pre {
 
 /* Fix navigation on mobile */
 .greedy-nav {
+  /* Hide the hamburger menu button on all screen sizes */
+  button {
+    display: none !important;
+  }
+  
   @media screen and (max-width: 767px) {
     min-width: 100%;
     
@@ -249,11 +254,6 @@ pre {
           font-size: $type-size-6;
         }
       }
-    }
-    
-    /* Hide the hamburger menu button on mobile */
-    button {
-      display: none !important;
     }
   }
 }
