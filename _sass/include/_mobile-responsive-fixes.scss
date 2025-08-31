@@ -232,6 +232,7 @@ pre {
     .visible-links {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       
       li {
         display: block;
@@ -241,10 +242,15 @@ pre {
           margin-bottom: 0.5em;
           
           a {
-            font-size: $type-size-5;
+            font-size: $type-size-4;
             margin: 0;
             padding: 0.5em 0;
             text-align: center;
+            
+            i.fa-home {
+              font-size: 1.5em;
+              color: inherit;
+            }
           }
         }
         
@@ -279,6 +285,7 @@ pre {
     border: none !important;
     box-shadow: none !important;
     display: block !important;
+    text-align: center !important;
     
     &:before, &:after {
       display: none !important;
