@@ -13,7 +13,7 @@ I am a Senior ML Research Engineer at the Kempner Institute at Harvard, speciali
 
 ## Schedule a Meeting
 
-I’m open to collaboration, research discussions, and new ideas. I’m always happy to connect with fellow researchers, students, and industry professionals.
+I’m open to collaboration, research discussions, and new ideas. I’m always happy to connect with fellow researchers, students, and industry professionals. These sessions are part of my commitment to the community and open to all.
 
 <div style="text-align: center; margin: 20px 0;">
   <a href="https://calendar.app.google/jky14xruQdbihX4c9" target="_blank" style="background-color: #146bf8ff; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; display: inline-block; font-size: 0.9em;"> Book an Appointment</a>
