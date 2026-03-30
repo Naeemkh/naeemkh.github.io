@@ -9,7 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Senior ML Research Engineer at the Kempner Institute at Harvard, specializing in performance and efficiency in machine learning. My work spans large-scale experiments on diffusion models and transformers, performance benchmarking on GPU clusters, and the development of reproducible open-source codebases. I focus on rapidly implementing research ideas, profiling and optimizing bottlenecks, and delivering systems that make AI experiments faster, scalable, and reliable.
+I am a Lead ML Research Engineer at the Kempner Institute at Harvard, specializing in performance and efficiency in machine learning. My work spans large-scale experiments on diffusion models and transformers, performance benchmarking on GPU clusters, and the development of reproducible open-source codebases. I focus on rapidly implementing research ideas, profiling and optimizing bottlenecks, and delivering systems that make AI experiments faster, scalable, and reliable.
+
+<div style="text-align: center; margin: 30px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ebc0521a-1067-44a5-828e-86378194ebfc" data-share-badge-host="https://www.credly.com"></div>
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e1181834-52d2-4800-a973-3deacc3716c1" data-share-badge-host="https://www.credly.com"></div>
+  <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+</div>
 
 ## Schedule a Meeting
 
