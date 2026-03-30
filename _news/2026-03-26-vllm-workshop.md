@@ -19,7 +19,7 @@ During the hands-on labs, participants accessed the Kempner HPC cluster to run o
 
 All materials, including the lab guides and code, are available in the public repository:
 
-- **Workshop Materials:** [https://github.com/KempnerInstitute/distributed-inference-vllm]https://github.com/KempnerInstitute/distributed-inference-vllm/tree/main/workshops/w260326)
+- **Workshop Materials:** [https://github.com/KempnerInstitute/distributed-inference-vllm](https://github.com/KempnerInstitute/distributed-inference-vllm/tree/main/workshops/w260326)
 
 - **Full Presentation:** [LLM Distributed Inference Slides](https://docs.google.com/presentation/d/1dIwQRIJnrVy-WZr3-BfhWGCo_tZzZVB2/edit?usp=sharing&ouid=110906857987716901096&rtpof=true&sd=true)
 
