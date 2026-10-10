@@ -1,0 +1,16 @@
+---
+title: "Fast Recovery Is Not Enough: Correct Goodput and Trajectory Fidelity for Foundation-Model Training on Preemptible Clusters"
+collection: publications
+category: conferences
+permalink: /publication/2026-09-04-hpec-fast-recovery-is-not-enough
+excerpt: 'Fast recovery is not the same as correct recovery. We define trajectory fidelity and correct goodput, implement and harden a correctness-aware recovery path in KempnerForge (FSDP2 x tensor parallel on PyTorch Distributed Checkpoint and SLURM requeue), and report the first at-scale measurement of what correct fault tolerance costs on dense 13B and 70B training to 160 NVIDIA H200 GPUs.'
+date: 2026-09-04
+venue: 'IEEE High Performance Extreme Computing Conference (HPEC) 2026, poster paper; to appear in IEEE Xplore'
+citation: 'Khoshnevis, N., Mazloumi, Y., Brown-Pinilla, C., Ngotiaoco, T., Balamurugan, D., Leinicke, S., & Shad, M. (2026). Fast Recovery Is Not Enough: Correct Goodput and Trajectory Fidelity for Foundation-Model Training on Preemptible Clusters. In 2026 IEEE High Performance Extreme Computing Conference (HPEC). IEEE.'
+---
+
+## Abstract
+
+Foundation models are increasingly pretrained on shared, preemptible clusters, where scheduler evictions and node failures routinely discard hours of GPU work. Research on recovery has focused almost entirely on minimizing recovery latency, implicitly assuming a resumed run is identical to the failure-free one. We argue that fast recovery is not the same as correct recovery: a routine asynchronous-checkpoint and SLURM-requeue resume can silently perturb the trajectory (zeroed optimizer moments, random-number generator and data-order drift, torn checkpoints), yet no crash or recovery-latency metric reveals it. We propose a correctness-aware objective built from two measures: trajectory fidelity (deviation of a resumed run's observables from a failure-free same-seed reference) and correct goodput (trajectory-preserving useful work per unit wall-clock). We implement and harden this recovery path in KempnerForge, a PyTorch-native fully sharded data-parallel (FSDP2) x tensor-parallel trainer on PyTorch Distributed Checkpoint and SLURM requeue. On dense 13B/70B (Llama-3) training to 160 NVIDIA H200 GPUs, we report, to our knowledge, the first at-scale measurement of what correct fault tolerance costs: the mechanisms add no measurable steady-state overhead and under 1% amortized checkpoint cost. A preliminary same-seed floor of Δloss ≈ 0.05 (measured at 32 GPUs) provides an operational correctness threshold, graceful-requeue MTTR is 217 to 235 s, and hard failures are detected in tens of seconds rather than the 1800 s default. On a 128-GPU, 37.7B-token run, training survives two injected faults with no visible trajectory discontinuity. A full mechanism-on/off ablation at scale remains future work.
+
+Accepted for poster presentation on 2026-08-19 (submission 325); camera-ready submitted 2026-09-04. The final version will appear in the IEEE Xplore Digital Library after the conference. Corresponding author: Naeem Khoshnevis. The training framework is open source at [github.com/KempnerInstitute/KempnerForge](https://github.com/KempnerInstitute/KempnerForge).
