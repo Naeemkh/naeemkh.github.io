@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Lead ML Research Engineer at the Kempner Institute at Harvard, specializing in performance and efficiency in machine learning. My work spans large-scale experiments on diffusion models and transformers, performance benchmarking on GPU clusters, and the development of reproducible open-source codebases. I focus on rapidly implementing research ideas, profiling and optimizing bottlenecks, and delivering systems that make AI experiments faster, scalable, and reliable.
+I am a Lead ML Research Engineer at the Kempner Institute at Harvard, specializing in performance and efficiency in machine learning. My current projects center on large-scale training and inference systems, including [KempnerForge](https://github.com/KempnerInstitute/KempnerForge), an open-source PyTorch-native framework for fault-tolerant distributed training of foundation models that I help develop, and my [MLPerf Inference v6.1](/news/2026-09-16-mlperf-inference-v6-1/) submission of Llama 3.1-8B in FP8 on a single NVIDIA H200. My work spans large-scale experiments on diffusion models and transformers, performance benchmarking on GPU clusters, and the development of reproducible open-source codebases. I focus on rapidly implementing research ideas, profiling and optimizing bottlenecks, and delivering systems that make AI experiments faster, scalable, and reliable.
 
 <div style="text-align: center; margin: 30px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ebc0521a-1067-44a5-828e-86378194ebfc" data-share-badge-host="https://www.credly.com"></div>
