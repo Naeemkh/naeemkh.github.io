@@ -9,6 +9,8 @@ The MLPerf Inference v6.1 results are now public:
 
 I had the opportunity to submit results for Llama 3.1-8B on a single NVIDIA H200 SXM 141 GB accelerator in the MLPerf Closed division, Datacenter category.
 
+The [MLCommons results announcement](https://mlcommons.org/2026/09/mlperf-inference-v6-1-results/) names me, as an individual contributor, among the six first-time submitters in this round.
+
 The measured performance was:
 
 * **Offline:** 7,796.59 output tokens/s
